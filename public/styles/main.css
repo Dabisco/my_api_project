@@ -1,0 +1,32 @@
+.card {
+  border: 1px solid rgb(232, 232, 232);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.card select {
+  padding: 1rem;
+  border-radius: 0.37rem;
+  margin-right: 1rem;
+}
+
+.card button {
+  border: 1px solid;
+  padding: 1rem;
+  border-radius: 0.37rem;
+}
+
+.card .activity {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border: 1px solid rgb(232, 232, 232);
+  margin-top: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.activity div {
+  display: flex;
+  justify-content: space-between;
+}

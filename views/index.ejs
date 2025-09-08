@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/base.css" />
+    <link rel="stylesheet" href="/styles/layout.css" />
+    <link rel="stylesheet" href="/styles/utilities.css" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body class="flex justify-center vh-100 items-center">
+    <div class="card">
+      <h1 class="mb-6">Let's find something for you to do ✌️</h1>
+      <form action="/find-activity" method="GET">
+        <select name="type">
+          <option value="" selected>Random Type</option>
+          <option value="education">Education</option>
+          <option value="charity">Charity</option>
+          <option value="recreational">Recreational</option>
+          <option value="relaxation">Relaxation</option>
+          <option value="busywork">BusyWork</option>
+          <option value="social">Social</option>
+          <option value="diy">DIY</option>
+          <option value="music">Music</option>
+        </select>
+
+        <select name="participants">
+          <option value="" selected>Any Number of People</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+
+        <button type="submit">GO</button>
+      </form>
+
+      <div class="activity">
+        <% if (locals.activity) { %>
+        <h2 class="text-center"><%= activity.activity %></h2>
+        <div>
+          <small><%= activity.type %></small>
+          <small><%= activity.participants %></small>
+        </div>
+        <% } else { %>
+        <h2 class="text-center"><%= error_Message %></h2>
+        <% } %>
+        <!-- <div>
+          <small>type</small>
+          <small>participants</small>
+        </div> -->
+      </div>
+    </div>
+  </body>
+</html>
