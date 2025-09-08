@@ -26,7 +26,25 @@
   border-radius: 0.5rem;
 }
 
+.activity h2 {
+  font-weight: 400;
+}
+
 .activity div {
   display: flex;
   justify-content: space-between;
+}
+
+@media (max-width: 456px) {
+  button {
+    display: block;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
 }
